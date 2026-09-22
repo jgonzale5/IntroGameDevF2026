@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "name": "Physics2DInput",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "08aad75f-0de8-478f-85c2-8f494ec15821",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "06221fea-246d-4363-92e6-a78e81e2ebac",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7d351469-c675-43af-9137-f357cb0ae90d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
