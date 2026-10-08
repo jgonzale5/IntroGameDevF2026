@@ -4,6 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+    public static string firstSceneLoaded;
+
+    private void Start()
+    {
+        firstSceneLoaded = SceneManager.GetActiveScene().name;
+    }
+
     //This public function will be called by the button to change to the scene with the specified name
     public void LoadScene(string sceneName)
     {
