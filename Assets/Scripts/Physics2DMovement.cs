@@ -20,8 +20,17 @@ public class Physics2DMovement : MonoBehaviour
     public Rigidbody reggiebody;
     //The variable telling this script how much force to apply to the object
     public float jumpForce = 10.0f;
-    //
+    //The speed of this object when it moves, in units per second
     public float speed = 2.0f;
+    //A reference to the player sound manager so we can play some sounds
+    public PlayerSound playerSoundManager;
+
+    //On awake (which happens the very first frame this object is active on the scene)
+    private void Awake()
+    {
+        //Get a reference to the player sound manager in this same game object
+        playerSoundManager = this.gameObject.GetComponent<PlayerSound>();
+    }
 
     private void Update()
     {
@@ -93,6 +102,8 @@ public class Physics2DMovement : MonoBehaviour
                 // is the number*/
                 reggiebody.AddForce(Vector3.up * jumpForce);
                 Debug.Log("Jumping");
+                //Call the "PlayJump" function
+                playerSoundManager.PlayJump();
 
                 //When you get here, end the function and return to where
                 // it was called
